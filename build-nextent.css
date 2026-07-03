@@ -413,34 +413,159 @@ body {
 }
 .spec-lbl { font-size: 0.75rem; opacity: 0.5; letter-spacing: 2px; text-transform: uppercase; }
 
-/* ===== MODULES ===== */
-.modules-section {
+/* ===== NX-MODULES: PRODUCT SHOWCASE ===== */
+.nx-modules {
     position: relative; z-index: 2;
-    padding: 100px 20px; max-width: 1100px; margin: 0 auto;
+    padding: 100px 20px; max-width: 1200px; margin: 0 auto;
 }
 
-.modules-grid {
+.nx-modules__header { text-align: center; margin-bottom: 50px; }
+
+.nx-modules__tag {
+    display: inline-block;
+    font-size: 0.7rem; letter-spacing: 5px;
+    color: var(--gold); opacity: 0.7;
+    margin-bottom: 16px; font-weight: 600;
+}
+
+.nx-modules__title {
+    font-family: var(--font-display);
+    font-size: clamp(1.8rem, 4vw, 3rem);
+    font-weight: 800; color: var(--cream-light);
+    margin-bottom: 16px; line-height: 1.2;
+}
+.nx-modules__accent { color: var(--gold-bright); }
+
+.nx-modules__subtitle {
+    font-size: 0.95rem; opacity: 0.5; line-height: 1.7;
+    max-width: 650px; margin: 0 auto;
+}
+
+/* Showcase: 2-column layout */
+.nx-modules__showcase {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 20px;
+    grid-template-columns: 1fr 1.4fr;
+    gap: 24px; margin-bottom: 30px;
 }
 
-.module-card {
+/* LEFT: Product Visual */
+.nx-modules__product {
+    display: flex; flex-direction: column; gap: 16px;
+}
+
+.nx-modules__img-wrap {
+    position: relative; border-radius: 20px; overflow: hidden;
+    border: 1px solid rgba(245,230,200,0.1);
+    aspect-ratio: 4/3;
+}
+.nx-modules__img {
+    width: 100%; height: 100%; object-fit: cover;
+}
+.nx-modules__img-overlay {
+    position: absolute; inset: 0;
+    background: linear-gradient(180deg, transparent 40%, rgba(8,31,9,0.7) 100%);
+}
+.nx-modules__brand {
+    position: absolute; bottom: 16px; left: 16px;
+    display: flex; align-items: center; gap: 6px;
+    color: var(--cream); font-size: 0.8rem;
+    font-weight: 700; letter-spacing: 2px;
+    opacity: 0.8;
+}
+
+/* Specs Badges */
+.nx-modules__specs {
+    display: flex; gap: 10px;
+}
+.nx-modules__spec {
+    flex: 1; display: flex; align-items: center; gap: 8px;
+    background: rgba(45,90,46,0.3);
+    border: 1px solid rgba(245,230,200,0.06);
+    border-radius: 14px; padding: 12px 14px;
+}
+.nx-modules__spec-icon { font-size: 1.2rem; }
+.nx-modules__spec strong {
+    display: block; font-size: 0.9rem; color: var(--cream-light);
+    font-family: var(--font-display);
+}
+.nx-modules__spec span {
+    font-size: 0.65rem; opacity: 0.45; letter-spacing: 0.5px;
+}
+
+/* Description */
+.nx-modules__desc {
+    font-size: 0.85rem; opacity: 0.45; line-height: 1.7;
+}
+
+/* CTA Button */
+.nx-modules__cta {
+    display: inline-flex; align-items: center; gap: 8px;
+    background: rgba(212,168,83,0.12);
+    border: 1.5px solid var(--gold);
+    color: var(--gold-bright); padding: 14px 28px;
+    border-radius: 50px; font-family: var(--font-body);
+    font-size: 0.85rem; font-weight: 700; letter-spacing: 1px;
+    cursor: pointer; transition: all 0.3s;
+    align-self: flex-start;
+}
+.nx-modules__cta:hover {
+    background: rgba(212,168,83,0.25);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(212,168,83,0.2);
+}
+
+/* RIGHT: Module Cards Grid */
+.nx-modules__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+}
+
+.nx-modules__card {
     background: rgba(45,90,46,0.3);
     border: 1px solid rgba(245,230,200,0.08);
-    border-radius: var(--radius); padding: 30px;
+    border-radius: 16px; padding: 24px 18px;
     text-align: center; transition: all 0.4s;
+    cursor: default;
 }
-.module-card:hover {
-    background: rgba(45,90,46,0.5);
+.nx-modules__card:hover {
+    background: rgba(45,90,46,0.55);
     border-color: var(--gold);
-    transform: translateY(-6px);
-    box-shadow: 0 12px 35px rgba(27,94,32,0.4);
+    transform: translateY(-4px);
+    box-shadow: 0 12px 30px rgba(27,94,32,0.35);
 }
 
-.module-icon { font-size: 2.5rem; margin-bottom: 12px; }
-.module-card h4 { font-size: 1.15rem; margin-bottom: 8px; font-family: var(--font-display); color: var(--cream-light); }
-.module-card p { font-size: 0.85rem; opacity: 0.55; line-height: 1.5; }
+.nx-modules__card-icon { font-size: 2rem; margin-bottom: 10px; }
+.nx-modules__card-name {
+    font-size: 1rem; font-weight: 700;
+    font-family: var(--font-display);
+    color: var(--cream-light); margin-bottom: 6px;
+}
+.nx-modules__card-desc {
+    font-size: 0.78rem; opacity: 0.5; line-height: 1.5;
+}
+
+/* Bottom Feature Badges */
+.nx-modules__features {
+    display: grid; grid-template-columns: repeat(4, 1fr);
+    gap: 14px; margin-top: 8px;
+}
+
+.nx-modules__feature {
+    display: flex; align-items: center; gap: 10px;
+    background: rgba(20,50,25,0.4);
+    border: 1px solid rgba(245,230,200,0.06);
+    border-radius: 14px; padding: 14px 16px;
+}
+.nx-modules__feature-icon { font-size: 1.3rem; }
+.nx-modules__feature strong {
+    display: block; font-size: 0.8rem; color: var(--cream-light);
+    font-weight: 700;
+}
+.nx-modules__feature span {
+    font-size: 0.65rem; opacity: 0.4;
+}
+
 
 /* ===== NX-GAME: PREMIUM CHALLENGE ===== */
 .nx-game {
@@ -1128,8 +1253,10 @@ footer {
     .nx-game__tent-panel { padding: 20px; }
     .nx-game__tent-wrap { max-width: 320px; }
 
-    .module-grid { grid-template-columns: repeat(2, 1fr); gap: 15px; }
-    .module-card { padding: 25px 18px; }
+    .nx-modules__showcase { grid-template-columns: 1fr; }
+    .nx-modules__grid { grid-template-columns: repeat(3, 1fr); }
+    .nx-modules__features { grid-template-columns: repeat(2, 1fr); }
+    .nx-modules__specs { flex-wrap: wrap; }
 
     .message-card { padding: 50px 30px; }
     .impact-stats { gap: 20px; }
@@ -1175,12 +1302,24 @@ footer {
     .usp-icon { font-size: 2rem; }
 
     /* Modules */
-    .modules-section { padding: 60px 16px; }
-    .module-grid { grid-template-columns: 1fr 1fr; gap: 12px; }
-    .module-card { padding: 20px 14px; }
-    .module-card .module-emoji { font-size: 1.8rem; }
-    .module-card h4 { font-size: 1rem; }
-    .module-card p { font-size: 0.8rem; }
+    .nx-modules { padding: 60px 16px; }
+    .nx-modules__title { font-size: 1.5rem; }
+    .nx-modules__subtitle { font-size: 0.8rem; }
+    .nx-modules__grid { grid-template-columns: repeat(2, 1fr); gap: 10px; }
+    .nx-modules__card { padding: 18px 14px; }
+    .nx-modules__card-icon { font-size: 1.6rem; margin-bottom: 6px; }
+    .nx-modules__card-name { font-size: 0.85rem; }
+    .nx-modules__card-desc { font-size: 0.7rem; }
+    .nx-modules__features { grid-template-columns: 1fr 1fr; gap: 10px; }
+    .nx-modules__feature { padding: 10px 12px; }
+    .nx-modules__feature strong { font-size: 0.7rem; }
+    .nx-modules__feature span { font-size: 0.6rem; }
+    .nx-modules__specs { gap: 8px; }
+    .nx-modules__spec { padding: 10px; border-radius: 10px; }
+    .nx-modules__spec strong { font-size: 0.8rem; }
+    .nx-modules__desc { font-size: 0.78rem; }
+    .nx-modules__cta { padding: 12px 22px; font-size: 0.78rem; }
+    .nx-modules__img-wrap { aspect-ratio: 16/9; }
 
     /* Specs */
     .specs-bar {

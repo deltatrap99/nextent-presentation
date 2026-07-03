@@ -125,14 +125,14 @@ const revealObserver = new IntersectionObserver((entries) => {
     });
 }, { threshold: 0.1 });
 
-document.querySelectorAll('.module-card, .usp-card, .section-tag, .section-title-serif, .message-card, .problem-card, .specs-bar, .cinema-player, .nx-game__header').forEach(el => {
+document.querySelectorAll('.nx-modules__card, .usp-card, .section-tag, .section-title-serif, .message-card, .problem-card, .specs-bar, .cinema-player, .nx-game__header, .nx-modules__header, .nx-modules__product, .nx-modules__features').forEach(el => {
     el.style.opacity = '0';
     el.style.transform = 'translateY(30px)';
     el.style.transition = 'opacity 0.8s ease, transform 0.8s ease';
     revealObserver.observe(el);
 });
 
-document.querySelectorAll('.module-card').forEach((c, i) => { c.style.transitionDelay = `${i * 0.1}s`; });
+document.querySelectorAll('.nx-modules__card').forEach((c, i) => { c.style.transitionDelay = `${i * 0.1}s`; });
 document.querySelectorAll('.usp-card').forEach((c, i) => { c.style.transitionDelay = `${i * 0.15}s`; });
 
 // ===== CINEMATIC PLAYER =====

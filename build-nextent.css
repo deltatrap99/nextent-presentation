@@ -1082,15 +1082,207 @@ footer {
 }
 
 /* ===== RESPONSIVE ===== */
+
+/* --- Tablet (max 900px) --- */
 @media (max-width: 900px) {
     .nx-game__board { grid-template-columns: 1fr; }
     .usp-grid { grid-template-columns: 1fr; }
     .problem-grid { grid-template-columns: 1fr; }
+
+    .hero { padding: 100px 20px 60px; min-height: auto; }
+    .hero-logo { width: 100px; height: 100px; }
+    .hero-tag { font-size: 0.65rem; letter-spacing: 6px; }
+
+    .cinema-player { margin: 0 15px; border-radius: 16px; }
+    .cinema-scene { min-height: 350px; }
+    .scene-headline { font-size: 1.6rem; }
+
+    .nx-game { padding: 70px 15px 60px; }
+    .nx-game__tent-panel { padding: 20px; }
+    .nx-game__tent-wrap { max-width: 320px; }
+
+    .module-grid { grid-template-columns: repeat(2, 1fr); gap: 15px; }
+    .module-card { padding: 25px 18px; }
+
+    .message-card { padding: 50px 30px; }
+    .impact-stats { gap: 20px; }
+
+    .nx-signup__card { padding: 40px 30px; }
 }
 
+/* --- Mobile (max 600px) --- */
 @media (max-width: 600px) {
-    .hero-stats { gap: 15px; }
+    /* Hero */
+    .hero { padding: 80px 16px 50px; }
+    .hero-logo { width: 80px; height: 80px; }
+    .hero-tag { font-size: 0.6rem; letter-spacing: 4px; padding: 8px 16px; }
+    .hero h2 { font-size: 0.85rem; letter-spacing: 6px; margin-bottom: 6px; }
+    .hero h1 { font-size: 3rem; margin-bottom: 10px; }
+    .hero-subtitle { font-size: 0.85rem; }
+    .hero-stats { gap: 12px; margin: 25px 0; }
+    .stat-num { font-size: 2rem; }
+    .stat-label { font-size: 0.55rem; letter-spacing: 2px; }
+    .cta-button { padding: 14px 32px; font-size: 0.85rem; letter-spacing: 3px; }
+    .scroll-hint { display: none; }
+
+    /* Cinema */
+    .cinema-player { margin: 0 10px; border-radius: 14px; }
+    .cinema-scene { min-height: 280px; padding: 20px; }
+    .scene-caption { font-size: 0.75rem; }
+    .scene-headline {
+        font-size: 1.3rem;
+        max-width: 280px; margin: 0 auto;
+        line-height: 1.4;
+    }
+    .cinema-controls { padding: 10px 14px; gap: 8px; }
+    .cinema-dots { gap: 5px; }
+    .cinema-dot { width: 7px; height: 7px; }
+
+    /* Section Titles */
+    .section-tag { font-size: 0.6rem; letter-spacing: 3px; }
+    .section-title-serif { font-size: 1.6rem; }
+
+    /* USP */
+    .usp-section { padding: 60px 16px; }
+    .usp-card { padding: 25px 18px; }
+    .usp-icon { font-size: 2rem; }
+
+    /* Modules */
+    .modules-section { padding: 60px 16px; }
+    .module-grid { grid-template-columns: 1fr 1fr; gap: 12px; }
+    .module-card { padding: 20px 14px; }
+    .module-card .module-emoji { font-size: 1.8rem; }
+    .module-card h4 { font-size: 1rem; }
+    .module-card p { font-size: 0.8rem; }
+
+    /* Specs */
+    .specs-bar {
+        gap: 16px; padding: 18px 14px;
+        flex-wrap: wrap; justify-content: center;
+    }
+    .spec-item { font-size: 0.7rem; }
+
+    /* Game */
+    .nx-game { padding: 60px 12px 50px; }
+    .nx-game__header { margin-bottom: 30px; }
+    .nx-game__tag { font-size: 0.65rem; letter-spacing: 3px; padding: 6px 16px; }
+    .nx-game__title { font-size: 1.6rem; }
+    .nx-game__desc { font-size: 0.85rem; }
+
+    .nx-game__board { gap: 16px; }
+    .nx-game__tent-panel { padding: 16px; border-radius: 18px; }
+    .nx-game__panel-tag { font-size: 0.6rem; letter-spacing: 3px; }
+    .nx-game__tent-wrap { max-width: 260px; }
+
+    .nx-game__module-status { gap: 5px; }
+    .nx-ms { font-size: 0.6rem; padding: 4px 7px; }
+
+    .nx-game__streak { gap: 8px; margin-top: 12px; }
+    .nx-game__streak-label { font-size: 0.6rem; }
+    .nx-sd { width: 11px; height: 11px; }
+
+    /* Card */
+    .nx-game__card-inner {
+        padding: 22px 18px; min-height: 110px;
+        border-radius: 16px;
+    }
+    .card-emoji { font-size: 2.2rem; margin-bottom: 8px; }
+    .card-front p { font-size: 0.9rem; }
+    .card-front .card-hint { font-size: 0.75rem; }
+
+    /* Timer */
+    .nx-game__timer { width: 85px; height: 85px; }
+    .nx-game__timer-num { font-size: 1.5rem; }
+    .nx-game__timer-label { font-size: 0.5rem; letter-spacing: 2px; }
+
+    /* Module Selector */
+    .nx-game__mods { padding: 14px; border-radius: 14px; }
+    .nx-game__mods-title { font-size: 0.6rem; letter-spacing: 3px; margin-bottom: 10px; }
+    .nx-game__mods-grid { grid-template-columns: repeat(3, 1fr); gap: 7px; }
+    .nx-mod {
+        padding: 10px 6px; border-radius: 10px;
+    }
+    .nx-mod__icon { font-size: 1.1rem; }
+    .nx-mod__name { font-size: 0.65rem; }
+
+    /* Action Buttons */
+    .nx-game__actions { gap: 8px; }
+    .nx-game__btn-draw, .nx-game__btn-repair {
+        padding: 13px 10px; font-size: 0.75rem;
+        letter-spacing: 1px; border-radius: 12px;
+    }
+
+    /* Score */
+    .nx-game__score { gap: 16px; padding: 14px 16px; border-radius: 12px; }
+    .nx-game__score-label { font-size: 0.55rem; letter-spacing: 2px; }
+    .nx-game__score-val { font-size: 1rem; }
+    .nx-game__score-val strong { font-size: 1.2rem; }
+    .nx-game__score-divider { height: 28px; }
+
+    /* Result Overlay */
+    .nx-result__box {
+        padding: 35px 25px; margin: 0 16px;
+        border-radius: 22px; max-width: 100%;
+    }
+    .nx-result__icon { font-size: 3rem; }
+    .nx-result__title { font-size: 1.4rem; }
+    .nx-result__tip { font-size: 0.8rem; padding: 10px; }
+    .nx-result__btn { padding: 12px 32px; font-size: 0.9rem; }
+
+    /* Message */
+    .message-section { padding: 60px 16px; }
+    .message-card { padding: 35px 20px; border-radius: 20px; }
+    .message-card h2 { font-size: 1.3rem; }
+    .impact-stats { gap: 15px; flex-wrap: wrap; justify-content: center; }
+    .impact span { font-size: 1.8rem; }
+
+    /* Problem */
+    .problem-section { padding: 60px 16px; }
+    .problem-card { padding: 25px 18px; }
+    .problem-card h3 { font-size: 0.7rem; }
+    .problem-card li { font-size: 0.85rem; }
+
+    /* Signup */
+    .nx-signup { padding: 60px 16px; }
+    .nx-signup__card { padding: 30px 20px; border-radius: 22px; }
+    .nx-signup__row { grid-template-columns: 1fr; }
+    .nx-signup__logo { width: 55px; height: 55px; }
+    .nx-signup__badge { font-size: 0.6rem; letter-spacing: 2px; padding: 5px 14px; }
+    .nx-signup__title { font-size: 1.4rem; }
+    .nx-signup__desc { font-size: 0.85rem; }
+    .nx-signup__field input,
+    .nx-signup__field select { padding: 12px 14px; font-size: 0.9rem; }
+    .nx-signup__btn { padding: 15px; font-size: 0.85rem; letter-spacing: 2px; }
+
+    /* Footer */
+    footer { padding: 25px 16px; }
+    footer p { font-size: 0.7rem; }
+    .footer-logo { width: 35px; height: 35px; }
+
+    /* Sound Toggle */
+    .sound-toggle {
+        width: 38px; height: 38px;
+        bottom: 12px; right: 12px;
+        font-size: 0.85rem;
+    }
+}
+
+/* --- Small Phones (max 400px) --- */
+@media (max-width: 400px) {
+    .hero h1 { font-size: 2.5rem; }
+    .hero-stats { gap: 8px; }
+    .stat-num { font-size: 1.6rem; }
+
+    .nx-game__title { font-size: 1.35rem; }
+    .nx-game__tent-wrap { max-width: 220px; }
     .nx-game__mods-grid { grid-template-columns: repeat(2, 1fr); }
-    .specs-bar { gap: 20px; padding: 20px; }
-    .message-card { padding: 40px 20px; }
+
+    .cinema-scene { min-height: 240px; }
+    .scene-headline { font-size: 1.1rem; }
+
+    .message-card h2 { font-size: 1.1rem; }
+    .impact span { font-size: 1.5rem; }
+    .impact p { font-size: 0.65rem; }
+
+    .nx-signup__title { font-size: 1.2rem; }
 }

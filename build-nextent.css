@@ -928,6 +928,33 @@ body {
     background: var(--forest-dark); color: var(--cream);
 }
 
+/* Partner Type Toggle */
+.nx-signup__toggle {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 10px;
+}
+.nx-signup__toggle-btn {
+    display: flex; align-items: center; justify-content: center;
+    gap: 8px; padding: 14px 16px;
+    background: rgba(245,230,200,0.04);
+    border: 1.5px solid rgba(245,230,200,0.08);
+    border-radius: 12px; color: var(--cream);
+    font-family: var(--font-body);
+    font-size: 0.9rem; font-weight: 500;
+    cursor: pointer; transition: all 0.3s;
+}
+.nx-signup__toggle-btn span { font-size: 1.1rem; }
+.nx-signup__toggle-btn:hover {
+    border-color: rgba(245,230,200,0.25);
+    background: rgba(245,230,200,0.06);
+}
+.nx-signup__toggle-btn.active {
+    border-color: var(--gold);
+    background: rgba(212,168,83,0.12);
+    color: var(--gold-bright);
+    font-weight: 700;
+    box-shadow: 0 0 20px rgba(212,168,83,0.1);
+}
+
 /* Submit Button */
 .nx-signup__btn {
     width: 100%; padding: 18px;

@@ -526,6 +526,14 @@ function spawnConfetti() {
 // Init audio on first interaction
 document.addEventListener('click', () => initAudio(), { once: true });
 
+// ===== PARTNER TYPE TOGGLE =====
+function selectPartnerType(btn) {
+    initAudio(); sfxClick();
+    document.querySelectorAll('.nx-signup__toggle-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    document.getElementById('signupPartnerType').value = btn.dataset.value;
+}
+
 // ===== SIGNUP FORM HANDLER =====
 function handleSignup(e) {
     e.preventDefault();

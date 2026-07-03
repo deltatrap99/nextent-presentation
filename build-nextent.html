@@ -41,7 +41,6 @@
 
     <!-- USP VIDEO SECTION -->
     <section class="usp-section" id="usp">
-        <h2 class="section-tag">SOLUTION</h2>
         <h3 class="section-title-serif">Unique Selling Proposition</h3>
 
         <!-- Cinematic Storytelling Player -->
@@ -402,6 +401,20 @@
                     <div class="nx-signup__field">
                         <label for="signupEmail">Email Address</label>
                         <input type="email" id="signupEmail" placeholder="you@example.com" required>
+                    </div>
+                </div>
+                <div class="nx-signup__row">
+                    <div class="nx-signup__field">
+                        <label>Partner Type</label>
+                        <div class="nx-signup__toggle" id="partnerToggle">
+                            <button type="button" class="nx-signup__toggle-btn active" data-value="individual" onclick="selectPartnerType(this)">
+                                <span>👤</span> Individual
+                            </button>
+                            <button type="button" class="nx-signup__toggle-btn" data-value="b2b" onclick="selectPartnerType(this)">
+                                <span>🏢</span> B2B / Enterprise
+                            </button>
+                        </div>
+                        <input type="hidden" id="signupPartnerType" value="individual">
                     </div>
                 </div>
                 <div class="nx-signup__field">
